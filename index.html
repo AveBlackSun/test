@@ -1,0 +1,72 @@
+<html><head><meta charset="utf-8"><meta http-equiv="x-ua-compatible" content="ie=edge"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="min/normalize.css">
+    <link rel="stylesheet" href="min/style.css">
+    <script src="min/main.js"></script>
+</head>
+<body>
+    <div class="part1">
+        <div class="rating">
+            <div class="rating-stars not-voiced">
+                <input type="radio" name="rating" id="mark5" onchange="vote(5);">
+                <label for="mark5">
+                    <span class="rating-stars__img "  data-rating="5"></span>
+                </label>
+                <input type="radio" name="rating" id="mark4" onchange="vote(4);">
+                <label for="mark4">
+                    <span class="rating-stars__img "  data-rating="4"></span>
+                </label>
+                <input type="radio" name="rating" id="mark3" onchange="vote(3);">
+                <label for="mark3">
+                    <span class="rating-stars__img "  data-rating="3"></span>
+                </label>
+                <input type="radio" name="rating" id="mark2" onchange="vote(2);">
+                <label for="mark2">
+                    <span class="rating-stars__img "  data-rating="2"></span>
+                </label>
+                <input type="radio" name="rating" id="mark1" onchange="vote(1);">
+                <label for="mark1">
+                    <span class="rating-stars__img "  data-rating="1"></span>
+                </label>
+            </div>
+            <div id="rating-num" class="rating-num">0</div>
+        </div>
+        <p>При реализации первой части возникло сразу несколько вопросов. Куда записывать данные голосования и вести их подсчет? Стоит ли для этого разворачивать сервер? Как отследить работоспособность от лица одного пользователя, ведь он не может голосовать больше 1 раза? Какой рейтинг отображать на звездочках - последний проголосованный или средний (ведь у пользователя может быть путанница - нажал 5 звезд а показало 3)? <br><br>
+            Я решил использовать localStorage для хранения рейтинга в пределах 1 пользователя, на деле же нужно вести запись в БД. <br><br>
+            <code>// if(localStorage['voted']== 'true') return; <br>
+            // localStorage.setItem('voted', 'true');</code>
+            <br><br>
+
+            Раскомментировав код выше в main.js мы включаем голосование 1 раз для пользователя.<br><br>
+
+            Звездочки я решил показывать последние нажатые пользователем, а рейтинг отображать средний из localStorage округленный до целого.
+            
+        </p>
+    </div>
+    <div class="part2">
+        <div class="progress-bar">
+            <div class="progress-bar-outer">
+                <div class="progress-bar-inner" id="progress-bar-inner" style="width: 1%">
+                    <div class="progress-bar-num"><input type="num" id="progress-num" value="1" class="empty-style" readonly>%</div>
+                </div>
+            </div>
+        </div>
+        <select id="add-value" class="add-value">
+            <option value="8">8</option>
+            <option value="16">16</option>
+            <option value="32">32</option>
+            <option value="64">64</option>
+        </select>
+        <button type='button' class="go-button" onclick="progress();">go</button>
+
+        <p>По второй задаче никаких вопросов и сложностей. Разве что в макете 32% не соответствую реальным 32% ширины родительского элеманта</p>
+    </div>
+
+    <div class="part3">
+        <div id="goip"></div>
+
+        <p>Для 3 задачи нужно развернуть локальный сервер или выгрузить файлы на какой нибудь рабочий.</p>
+    </div>
+</body>
+
+
