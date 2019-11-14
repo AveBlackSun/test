@@ -1,0 +1,84 @@
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Open Sans', sans-serif;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.rating{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:end;-webkit-align-items:flex-end;-ms-flex-align:end;align-items:flex-end}
+.rating-stars{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-align:center;-webkit-align-items:center;-ms-flex-align:center;align-items:center;-webkit-box-orient:horizontal;-webkit-box-direction:reverse;-webkit-flex-direction:row-reverse;-ms-flex-direction:row-reverse;flex-direction:row-reverse;margin-right:4px}
+.rating-stars{margin-right:12px}}.rating-stars.not-voiced:hover label span{background-image:url(../images/star.svg)!important}
+.rating-stars.not-voiced label:hover span{background-image:url(../images/star-active.svg)!important}.rating-stars.not-voiced label:hover~label span{background-image:url(../images/star-active.svg)!important}.rating-stars input{display:none}.rating-stars input:checked+label span{background-image:url(../images/star-active.svg)}
+.rating-stars input:checked~label span{background-image:url(../images/star-active.svg)}
+.rating-stars label{padding-right:8px;cursor:pointer}
+.rating-stars__img{width:24px;height:24px;background-image:url(../images/star.svg);background-repeat:no-repeat;background-size:contain;display:block}
+.rating-num {
+	color: #eabd45;
+}
+
+.part1,
+.part2,
+.part3 {
+
+	margin: 20px 37px;
+
+	border-bottom: 1px solid black;
+}
+
+.progress-bar {
+	background: #555;
+    height: 25px;
+    width: 504px;
+    border: 1px solid #555;
+
+    margin-bottom: 5px;
+}
+
+.progress-bar-outer {
+	margin: 0 2px;
+	width: 500px;
+
+
+}
+
+.progress-bar-inner {
+	background: linear-gradient(#90EE90, #8FBC8F);
+	position: relative;
+	height: 21px;
+    margin-top: 1px;
+    -webkit-transition: width 1s; 
+  	transition: width 1s;
+	
+}
+
+.progress-bar-num {
+	position: absolute;
+	right: 5px;
+	width: 45px;
+}
+
+.add-value {
+	    width: 63px;
+    height: 34px;
+    font-size: 17px;
+    padding-left: 10px;
+}
+
+.go-button {
+	width: 35px;
+	height: 33px;
+}
+
+.empty-style {
+	border: 0;
+	outline: 0;
+	width: 30px;
+    background: none;
+    display: inline;
+    text-align: right;
+
+}
